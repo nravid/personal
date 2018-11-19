@@ -1,5 +1,5 @@
 
-Import-Module C:\labbuildr2017\vmxtoolkit\vmxtoolkit
+#Import-Module C:\labbuildr2017\vmxtoolkit\vmxtoolkit
 
 $labdc = get-vmx | where {$_.VMXName -eq "lab-dc-01"} | Get-VMXInfo
 $labvpx = get-vmx | where {$_.VMXName -eq "lab-vpx-01"} | Get-VMXInfo

@@ -8,8 +8,10 @@
 #Start-VMX -VMXName "ESX-03"
 
 Start-VMX -VMXName "VYOS"
-Start-VMX -VMXName "VPX"
-Start-VMX -VMXName "NMAS"
+Start-VMX -VMXName "lab-dc-01"
+Start-VMX -VMXName "lab-win10-gtg"
+#Start-VMX -VMXName "VPX"
+#Start-VMX -VMXName "NMAS"
 
 #Start-Sleep -s 540
 

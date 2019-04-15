@@ -18,7 +18,7 @@
 #$nmas = get-vmx | where {$_.VMXName -eq "nmas"}
 #$vpx = get-vmx | where {$_.VMXName -eq "VPX"}
 $labdc = get-vmx | where {$_.VMXName -eq "lab-dc-01"}
-$labgtg = get-vmx | where {$_.VMXName -eq "lab-gtg-01"}
+$labgtg = get-vmx | where {$_.VMXName -eq "lab-win10-gtg"}
 $vyos = get-vmx | where {$_.VMXName -eq "vyos"}
 
 #Stop-VMX -VMXName $nsxmgr.VMXName -Mode soft -config $nsxmgr.Config
@@ -28,5 +28,5 @@ $vyos = get-vmx | where {$_.VMXName -eq "vyos"}
 #Stop-VMX -VMXName $nmas.VMXName -Mode soft -config $nmas.Config
 #Stop-VMX -VMXName $vpx.VMXName -Mode soft -config $vpx.Config
 Stop-VMX -VMXName $labdc.VMXName -Mode soft -config $labdc.Config
-Stop-VMX -VMXName $lab-win10-gtg.VMXName -Mode soft -config $labgtg.Config"
+Stop-VMX -VMXName $lab-win10-gtg.VMXName -Mode soft -config $labgtg.Config
 Stop-VMX -VMXName $vyos.VMXName -Mode soft -config $vyos.Config

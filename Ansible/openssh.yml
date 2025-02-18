@@ -1,0 +1,17 @@
+---
+
+  - hosts: all
+    become: true
+    tasks:
+    - name: install open ssh
+      apt:
+        name: openssh-server
+        state: latest
+        update_cache: yes
+
+
+    - name: start and enable open ssh
+      service:
+        name: ssh
+        state: started
+        enabled: yes

@@ -1,0 +1,19 @@
+- name: create ansuser
+  tags: always
+  user:
+    name: ansuser
+    groups: root
+
+- name: add ssh key for ansuser
+  authorized_key:
+    user: ansuser
+    key: ""
+
+- name: add sudoers file for ansuser
+  tags: always
+  copy:
+    src: sudoer_ansuser
+    dest: /etc/sudoers.d/ansuser
+    owner: root
+    group: root
+    mode: 0440

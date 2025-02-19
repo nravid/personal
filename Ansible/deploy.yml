@@ -1,0 +1,20 @@
+---
+ 
+- hosts: all
+  become: true
+  pre_tasks:
+ 
+  - name: update repository index
+    apt:
+      update_cache: yes
+    changed_when: false
+ 
+  - name: update all packages
+    apt:
+      name: "*"
+      state: latest
+ 
+- hosts: all
+  become: true
+  roles:
+    - base

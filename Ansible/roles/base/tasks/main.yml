@@ -7,7 +7,7 @@
 - name: add ssh key for ansuser
   authorized_key:
     user: ansuser
-    key: ""
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPzD0eH8qfJL6JayUN/EcDGn1rtPQA5nIp9tAyT3Fk7f ansuser"
 
 - name: add sudoers file for ansuser
   tags: always

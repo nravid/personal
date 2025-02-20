@@ -56,11 +56,11 @@
 
 - name: install icaclient
   apt:
-    pkg: /tmp/icaclient_24.11.0.85_amd64.deb
+    deb: /tmp/icaclient_24.11.0.85_amd64.deb
 
 - name: install icaclientUSB
   apt:
-    pkg: /tmp/ctxusb_24.11.0.85_amd64.deb
+    deb: /tmp/ctxusb_24.11.0.85_amd64.deb
 
 - name: install notepadqq
   apt:

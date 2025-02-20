@@ -17,3 +17,58 @@
     owner: root
     group: root
     mode: 0440
+
+- name: install open ssh
+  apt:
+    name: openssh-server
+    state: latest
+    update_cache: yes
+
+- name: start and enable open ssh
+  service:
+    name: ssh
+    state: started
+    enabled: yes
+
+- name: install xrdp
+  apt:
+    name: xrdp
+    state: latest
+    update_cache: yes
+
+- name: install icaclient
+  apt:
+    name: icaclient
+    state: latest
+    update_cache: yes
+
+- name: install notepadqq
+  apt:
+    name: notepadqq
+    state: latest
+    update_cache: yes
+
+- name: install remmina
+  apt:
+    name: remmina
+    state: latest
+    update_cache: yes
+
+- name: install Multimedia CODECs
+  apt:
+    name: mint-meta-codecs
+    state: latest
+    update_cache: yes
+
+- name: install putty
+  apt:
+    name: putty
+    state: latest
+    update_cache: yes
+
+- name: install firefox
+  apt:
+    name: firefox
+    state: latest
+    update_cache: yes
+

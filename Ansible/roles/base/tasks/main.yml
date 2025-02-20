@@ -36,11 +36,31 @@
     state: latest
     update_cache: yes
 
+- name: copy icaclient installation file
+  tags: always
+  copy:
+    src: icaclient_24.11.0.85_amd64.deb
+    dest: /tmp/icaclient_24.11.0.85_amd64.deb
+    owner: root
+    group: root
+    mode: 0777
+
+- name: copy icaclient USB installation file
+  tags: always
+  copy:
+    src: ctxusb_24.11.0.85_amd64.deb
+    dest: /tmp/ctxusb_24.11.0.85_amd64.deb
+    owner: root
+    group: root
+    mode: 0777
+
 - name: install icaclient
   apt:
-    name: icaclient
-    state: latest
-    update_cache: yes
+    pkg: /tmp/icaclient_24.11.0.85_amd64.deb
+
+- name: install icaclientUSB
+  apt:
+    pkg: /tmp/ctxusb_24.11.0.85_amd64.deb
 
 - name: install notepadqq
   apt:

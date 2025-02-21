@@ -92,3 +92,9 @@
     state: latest
     update_cache: yes
 
+- name: install libre office
+  apt:
+    name: libreoffice
+    state: latest
+    update_cache: yes
+
